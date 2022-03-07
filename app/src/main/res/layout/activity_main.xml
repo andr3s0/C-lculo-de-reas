@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/ladoUno" />
+    <EditText
+        android:id="@+id/valorLadoUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/valorUno"
+        android:inputType="numberDecimal"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/ladoDos" />
+
+    <EditText
+        android:id="@+id/valorLadoDos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/valorDos"
+        android:inputType="numberDecimal"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/baseUno" />
+
+    <EditText
+        android:id="@+id/valorBaseUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/valorBaseUno"
+        android:inputType="numberDecimal"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/alturaUno" />
+
+    <EditText
+        android:id="@+id/valorAlturaUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/valorAlturaUno"
+        android:inputType="numberDecimal"
+        android:singleLine="true"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioAreaRectangulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="área rectángulo" />
+
+        <RadioButton
+            android:id="@+id/radioAreaTriangulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="área triángulo" />
+    </RadioGroup>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:onClick="calcularAreas"
+        android:background="@drawable/rounded_button_calcular"
+        android:text="@string/send" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/rounded_button_limpiar"
+        android:text="@string/clear"
+        android:onClick="limpiarValores"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textColor="#D66868"
+        android:textSize="20sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
